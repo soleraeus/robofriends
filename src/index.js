@@ -1,21 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Card from './Card';
 import * as serviceWorker from './serviceWorker';
-import {robots} from './robots'
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <section className='gallery'>
-      {robots.map((value) =>{
-        return <Card key={value.id} name={value.name} email={value.email} username={value.username} />
-      })
-      }
-    </section>
-    <footer>
-      <p>This is my footer yo!</p>
-    </footer>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
