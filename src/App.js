@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Card from './Card';
 import {robots} from './robots';
 import Searchbox from './Searchbox';
+import './App.css';
 
 class App extends Component{
 
@@ -26,7 +27,7 @@ class App extends Component{
         return(
             <>
             <header>
-            <h1>Robofriends</h1>
+            <h1>robofriends</h1>
             <Searchbox searchChange={this.onSearchChange}/>
             </header>
             <section className='gallery'>

@@ -13,7 +13,7 @@ img{
 .Card{
     display: flex;
     flex-direction: column;
-    background: rgb(165, 235, 165);
+    background: rgb(126, 206, 139);
     border-radius: 12px;
     padding: 3px;
     margin: 5px 5px;
