@@ -14,6 +14,18 @@ code {
 
 .gallery{
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  margin: 1vh 10vw;
+  padding: 1vw;
   justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  text-align: center;
+  margin: 3vh 0vw;
 }

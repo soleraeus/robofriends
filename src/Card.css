@@ -2,11 +2,13 @@ h2, p{
     text-align: center;
 }
 
+h2{
+    font-size: 1.4rem;
+}
+
 img{
-    /* margin-left: auto;
-    margin-right: auto;
-    display: block; */
     align-self: center;
+    width: 220px;
 }
 .Card{
     display: flex;
@@ -14,8 +16,8 @@ img{
     background: rgb(165, 235, 165);
     border-radius: 12px;
     padding: 3px;
-    margin: 10px 10px;
-    width: 300px;
+    margin: 5px 5px;
+    width: 270px;
     height: 350px;
     transition: all 400ms;
 }

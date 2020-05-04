@@ -1,17 +1,43 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Card from './Card';
 import {robots} from './robots';
+import Searchbox from './Searchbox';
 
+class App extends Component{
 
-const App = () => {
-    return(
-        <section className='gallery'>
-            {robots.map((value) =>{
-                return <Card key={value.id} name={value.name} email={value.email} username={value.username} />
-            })
-            }
-        </section>
-    );
+    constructor(){
+        super();
+        this.state = {
+            robots: robots,
+            searchfield: ''
+        };
+
+        // this.onSearchChange = this.onSearchChange.bind(this);
+    }
+
+    onSearchChange = (event) => {
+        this.setState({searchfield : event.target.value});
+    }
+
+    render = () => {
+        const filteredRobots = this.state.robots.filter(robot =>{
+            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        });
+        return(
+            <>
+            <header>
+            <h1>Robofriends</h1>
+            <Searchbox searchChange={this.onSearchChange}/>
+            </header>
+            <section className='gallery'>
+                {filteredRobots.map((value) =>{
+                    return <Card key={value.id} name={value.name} email={value.email} username={value.username} />
+                })
+                }
+            </section>
+            </>
+        );
+    }
 }
 
 export default App;
