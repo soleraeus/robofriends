@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Card from './Card';
 import {robots} from './robots';
 
 
-class App extends Component{
-    render(){
+const App = () => {
     return(
         <section className='gallery'>
             {robots.map((value) =>{
@@ -13,7 +12,6 @@ class App extends Component{
             }
         </section>
     );
-    }
 }
 
 export default App;

@@ -1,16 +1,14 @@
 import React from 'react';
 import './Card.css';
 
-class Card extends React.Component {
-  render() {
-    return (
+const Card = ({username,name, email}) => {
+  return (
       <article className="Card">
-        <img src={`https://robohash.org/${this.props.username}`} alt='portrait' />
-          <h2>{this.props.name}</h2>
-          <p>{this.props.email}</p>
+        <img src={`https://robohash.org/${username}`} alt='portrait' />
+          <h2>{name}</h2>
+          <p>{email}</p>
       </article>
     );
-  }
 }
 
 export default Card;
